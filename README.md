@@ -1,4 +1,4 @@
-# ironclad
+# Ironclad
 
 Ironclad monitors micro transaction data for you.
 
