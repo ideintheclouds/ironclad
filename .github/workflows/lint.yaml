@@ -31,6 +31,7 @@ jobs:
         run: flask test
       - name: Docker deploy
         run: |
-          sudo apt-get install docker-ce docker-ce-cli containerd.io
+          cat /etc/os-release
+          apt-get install docker-ce docker-ce-cli containerd.io
           docker build -t github.ideintheclouds.com/ironclad/ironclad/ironclad:latest .
           docker push github.ideintheclouds.com/ironclad/ironclad/ironclad:latest
