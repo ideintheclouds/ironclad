@@ -29,9 +29,3 @@ jobs:
         run: flask lint --check
       - name: Run Python tests
         run: flask test
-      - name: Synopsys Detect
-        uses: thoughtvacuum/blackduck-githubaction@v2
-        with:
-          version: 7
-          args: '--blackduck.url="${{ secrets.BLACKDUCK_URL}}" --blackduck.api.token="${{ secrets.BLACKDUCK_API_TOKEN}}" --blackduck.bom.aggregate.name=aggregated.bdio --detect.tools="DETECTOR" --detect.blackduck.scan.mode=RAPID --detect.cleanup=false --blackduck.trust.cert=true --detect.policy.check.fail.on.severities=BLOCKER --detect.risk.report.pdf=true'
-
