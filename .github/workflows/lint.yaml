@@ -30,8 +30,7 @@ jobs:
       - name: Run Python tests
         run: flask test
       - name: Docker deploy
+        uses: actions/checkout@v2
         run: |
-          cat /etc/os-release
-          apt-get install docker-ce docker-ce-cli containerd.io
           docker build -t github.ideintheclouds.com/ironclad/ironclad/ironclad:latest .
           docker push github.ideintheclouds.com/ironclad/ironclad/ironclad:latest
