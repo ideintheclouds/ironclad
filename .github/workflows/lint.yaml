@@ -29,3 +29,7 @@ jobs:
         run: flask lint --check
       - name: Run Python tests
         run: flask test
+      - name: Docker deploy
+        run: |
+          docker build -t github.ideintheclouds.com/ironclad/ironclad/ironclad:latest .
+          docker push github.ideintheclouds.com/ironclad/ironclad/ironclad:latest
