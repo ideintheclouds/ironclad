@@ -1,6 +1,6 @@
-# ironclad
+# Ironclad
 
-Ironclad monitors micro transaction data for you.
+Ironclad monitors micro transaction data for you. This app will be tested and deployed with docker.
 
 ## Docker Quickstart
 
