@@ -8,7 +8,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Synopsys Detect
-      - uses: thoughtvacuum/blackduck-githubaction@v2
+        uses: thoughtvacuum/blackduck-githubaction@v2
         with:
           version: 7
           args: '--blackduck.url="${{ secrets.BLACKDUCK_URL}}" --blackduck.api.token="${{ secrets.BLACKDUCK_API_TOKEN}}" --blackduck.trust.cert=true --detect.policy.check.fail.on.severities=BLOCKER --detect.risk.report.pdf=true'
