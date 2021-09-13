@@ -46,5 +46,5 @@ jobs:
           args: '--blackduck.url="${{ secrets.BLACKDUCK_URL}}" --blackduck.api.token="${{ secrets.BLACKDUCK_API_TOKEN}}" --blackduck.trust.cert=true --detect.policy.check.fail.on.severities=BLOCKER --detect.risk.report.pdf=true'
       - name: Build
         run:
-          - docker-compose build flask-dev
+          - sudo docker-compose build flask-dev
       
