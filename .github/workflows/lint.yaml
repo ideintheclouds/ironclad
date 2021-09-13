@@ -1,4 +1,4 @@
-name: Build Status
+name: Testing Linting Pipeline
 
 on:
   push:
@@ -30,6 +30,8 @@ jobs:
           pip install -r requirements/dev.txt
       - name: Install Node dependencies
         run: npm install
+      - name: Who Am I?
+        run: whoami
       - run: cp .env.example .env
       - name: Run Node lints
         run: npm run lint
