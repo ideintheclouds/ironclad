@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 1.8
@@ -39,11 +39,6 @@ jobs:
         run: flask lint --check
       - name: Run Python tests
         run: flask test
-      - name: Synopsys Detect
-        uses: thoughtvacuum/blackduck-githubaction@v2
-        with:
-          version: 7
-          args: '--blackduck.url="${{ secrets.BLACKDUCK_URL}}" --blackduck.api.token="${{ secrets.BLACKDUCK_API_TOKEN}}" --blackduck.trust.cert=true --detect.policy.check.fail.on.severities=BLOCKER --detect.risk.report.pdf=true'
       - name: Build
         run: sudo docker-compose build flask-dev
       
