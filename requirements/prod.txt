@@ -37,7 +37,7 @@ Flask-Caching>=1.7.2
 Flask-DebugToolbar==0.11.0
 
 # Environment variable parsing
-environs==9.3.3
+environs==9.3.4
 
 # Vulnerable dependency
 urllib3==1.26.5
